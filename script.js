@@ -24,10 +24,15 @@ window.addEventListener("load", function() {
         },
     });
 
-
-
-
-
+    // Inicializa ScrollReveal
+    ScrollReveal().reveal('.reveal', {
+        delay: 200,
+        distance: '50px',
+        origin: 'bottom',
+        duration: 1000,
+        easing: 'ease-in-out',
+        reset: true // Para animar sempre que o elemento aparecer na tela
+    });
 
     // Adiciona animação de entrada para os parágrafos
     anime({
@@ -44,6 +49,7 @@ window.addEventListener("load", function() {
 // ScrollReveal().reveal('.about-section p', { delay: 600, distance: '50px', origin: 'bottom', interval: 100 });
 
 //BOTÃO DE SAIBA MAIS PARA MOSTRAR O PARÁGRAFO:
+// Função para mostrar/ocultar parágrafo
 function toggleParagrafo() {
     var paragrafo = document.getElementById("paragrafo");
 
@@ -59,8 +65,6 @@ function toggleParagrafo() {
         document.getElementById("saibaMaisBtn").innerText = "Saiba Mais";
     }
 }
-
-
 
 function redirectToWhatsApp() {
     const mensagem = 'Olá! Vim pelo site e gostaria de agendar uma consulta.';
